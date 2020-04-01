@@ -61,7 +61,6 @@ function handAi() {
 
 
     document.querySelector(`[data-option="${game.playerHand}"]`).style.boxShadow = '';
-    game.playerHand = "";
 
 }
 

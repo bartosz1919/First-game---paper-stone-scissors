@@ -60,8 +60,7 @@ function handAi() {
     document.querySelector("[data-summary=who-win]").style.color = `${color}`;
 
 
-    document.querySelector(`[data-option="${game.playerHand}"]`).style.boxShadow = '';
-    game.playerHand = "";
+    document.querySelector(`[data-option=${playerHand}]`);
 
 }
 

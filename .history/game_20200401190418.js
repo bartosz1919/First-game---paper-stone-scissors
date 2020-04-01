@@ -45,7 +45,7 @@ function handAi() {
     if (game.playerHand === game.aiHand) {
         winner = "Draw";
         document.querySelector("p.draws span").textContent = ++statistic.draws;
-        color = "yellow";
+        color = "yelow";
     } else if (game.playerHand === 'stone' && game.aiHand === 'scissors' || game.playerHand === 'paper' && game.aiHand === 'stone' || game.playerHand === 'scissors' && game.aiHand === 'paper') {
         winner = "Player";
         document.querySelector("p.wins span").textContent = ++statistic.wins;
@@ -58,10 +58,6 @@ function handAi() {
 
     document.querySelector("[data-summary=who-win]").textContent = winner;
     document.querySelector("[data-summary=who-win]").style.color = `${color}`;
-
-
-    document.querySelector(`[data-option="${game.playerHand}"]`).style.boxShadow = '';
-    game.playerHand = "";
 
 }
 

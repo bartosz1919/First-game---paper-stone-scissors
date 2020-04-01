@@ -45,23 +45,16 @@ function handAi() {
     if (game.playerHand === game.aiHand) {
         winner = "Draw";
         document.querySelector("p.draws span").textContent = ++statistic.draws;
-        color = "yellow";
     } else if (game.playerHand === 'stone' && game.aiHand === 'scissors' || game.playerHand === 'paper' && game.aiHand === 'stone' || game.playerHand === 'scissors' && game.aiHand === 'paper') {
         winner = "Player";
         document.querySelector("p.wins span").textContent = ++statistic.wins;
-        color = "green";
     } else {
         winner = "AI";
         document.querySelector("p.losses span").textContent = ++statistic.losses;
-        color = "red";
     }
 
     document.querySelector("[data-summary=who-win]").textContent = winner;
-    document.querySelector("[data-summary=who-win]").style.color = `${color}`;
-
-
-    document.querySelector(`[data-option="${game.playerHand}"]`).style.boxShadow = '';
-    game.playerHand = "";
+    document.querySelector("[data-summary=who-win]").style.color = `${color}';
 
 }
 
